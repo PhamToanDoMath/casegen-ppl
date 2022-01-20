@@ -1,0 +1,15 @@
+---
+in:
+Class Diagram{
+} 
+Class Program{
+    main(){
+        a=1;
+    }
+}
+out:successful
+---
+in:
+Class Diagram{
+}
+out:Error on line 2 col 1: <EOF>
