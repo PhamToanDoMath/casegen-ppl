@@ -27,7 +27,7 @@ if (sys.argv[1] =='lexer'):
     with open("lexer_case.txt", "r") as f:
         with open("./test/LexerSuite.py", "w") as o:
             o.write(templateHeader + "\n")
-            for line in f.readlines():
+            for line in f.readlines()[:-1]:
                 newInput = line.split('|')
                 templateTest = templateString.format(LEXER_START , newInput[0], newInput[1][:-1], LEXER_START)
                 LEXER_START += 1
