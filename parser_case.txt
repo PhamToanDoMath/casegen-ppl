@@ -4,7 +4,7 @@ Class Diagram{
 } 
 Class Program{
     main(){
-        a=1;
+        a=3;
     }
 }
 out:successful

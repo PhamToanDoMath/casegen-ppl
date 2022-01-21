@@ -1,11 +1,7 @@
-import sys,os
-import subprocess
+import sys
 LEXER_START = 101
 PARSER_START = 201
 
-for path in ['./test']:
-	sys.path.append(path)
-from LexerSuite import LexerSuite
             
 
 templateHeader ='''import unittest
