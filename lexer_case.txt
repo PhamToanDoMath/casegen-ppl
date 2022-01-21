@@ -1,8 +1,1 @@
-##header1##|<EOF>
-##header2#header3##|<EOF>
-##header2## var x \n ##header3##|var,x,<EOF>
-##header2#abc#header3##|<EOF>
-##header1\n header2\n header3\t ##|<EOF>
-##header1#|Error Token #
-##header2<EOF>##|<EOF>
-
+\"asbnc\"|asbnc,<EOF>

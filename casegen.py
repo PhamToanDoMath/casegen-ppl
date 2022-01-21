@@ -1,7 +1,12 @@
-import sys
+import sys,os
+import subprocess
 LEXER_START = 101
 PARSER_START = 201
 
+for path in ['./test']:
+	sys.path.append(path)
+from LexerSuite import LexerSuite
+            
 
 templateHeader ='''import unittest
 from TestUtils import TestLexer
@@ -27,9 +32,10 @@ if (sys.argv[1] =='lexer'):
     with open("lexer_case.txt", "r") as f:
         with open("./test/LexerSuite.py", "w") as o:
             o.write(templateHeader + "\n")
-            for line in f.readlines()[:-1]:
+            for line in f.read().split('\n')[:-1]:
+                print(line)
                 newInput = line.split('|')
-                templateTest = templateString.format(LEXER_START , newInput[0], newInput[1][:-1], LEXER_START)
+                templateTest = templateString.format(LEXER_START , newInput[0], newInput[1], LEXER_START)
                 LEXER_START += 1
                 o.write(templateTest)
 
