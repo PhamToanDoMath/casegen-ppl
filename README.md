@@ -1,3 +1,5 @@
+## How to use:
+
 1. Decompress at main folder (same folder with run.py)
 
 2. Run `python casegen.py lexer` to generate test-case from lexer_case.txt
